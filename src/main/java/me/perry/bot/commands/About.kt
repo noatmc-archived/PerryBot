@@ -33,7 +33,7 @@ class About : ListenerAdapter() {
             )
             embedBuilder.addField(
                 ":page_facing_up: - Source",
-                "Noat's original version is on GitHub. https://github.com/noatmc/2bot2australia",
+                "Noat's original version is on GitHub. https://github.com/noatmc/2bot2australia\n Perry's version is on GitHub. https://github.com/notperry12345678902/PerryBot",
                 false
             )
             event.channel.sendMessageEmbeds(embedBuilder.build()).queue()
