@@ -18,7 +18,7 @@ class Player : ListenerAdapter() {
     override fun onMessageReceived(event: MessageReceivedEvent) {
         val args = listOf(*event.message.contentRaw.split(" ".toRegex()).toTypedArray())
         if (event.message.contentRaw.startsWith("+player", ignoreCase = true)) {
-            println(SimpleDateFormat("h:mm:ss a ").format(Date()) + event.message.author.asTag + " Executed the player command.")
+            println(SimpleDateFormat("h:mm:ss a ").format(Date()) + event.message.author.asTag + " Executed the player command in: " + event.message.guild.name)
             if (args.size > 1) {
                 event.message.addReaction("✅").queue()
                 val uuid = getUUIDFromName(args[1])

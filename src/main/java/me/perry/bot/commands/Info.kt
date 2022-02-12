@@ -17,7 +17,7 @@ class Info : ListenerAdapter() {
     override fun onMessageReceived(event: MessageReceivedEvent) {
         if (event.message.contentRaw.equals("+info", ignoreCase = true)) {
             event.message.addReaction("✅").queue()
-            println(SimpleDateFormat("h:mm:ss a ").format(Date()) + event.message.author.asTag + " Executed the info command.")
+            println(SimpleDateFormat("h:mm:ss a ").format(Date()) + event.message.author.asTag + " Executed the info command in: " + event.message.guild.name)
             val embedBuilder = EmbedBuilder()
             val memory = parseArray("https://api.2b2t.com.au/v1/server", "performance", "totalMemory")
             embedBuilder.setTitle("2b2t AU Server Info")

@@ -15,7 +15,7 @@ class Help : ListenerAdapter() {
     override fun onMessageReceived(event: MessageReceivedEvent) {
         if (event.message.contentRaw.equals("+help", ignoreCase = true)) {
             event.message.addReaction("✅").queue()
-            println(SimpleDateFormat("h:mm:ss a ").format(Date()) + event.message.author.asTag + " Executed the help command.")
+            println(SimpleDateFormat("h:mm:ss a ").format(Date()) + event.message.author.asTag + " executed the help command in: " + event.message.guild.name)
             val embedBuilder = EmbedBuilder()
             embedBuilder.setTitle("Help Page")
             embedBuilder.setColor(

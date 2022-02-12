@@ -15,7 +15,7 @@ class About : ListenerAdapter() {
     override fun onMessageReceived(event: MessageReceivedEvent) {
         if (event.message.contentRaw.equals("+about", ignoreCase = true)) {
             event.message.addReaction("✅").queue()
-            println(SimpleDateFormat("h:mm:ss a ").format(Date()) + event.message.author.asTag + " Executed the about command.")
+            println(SimpleDateFormat("h:mm:ss a ").format(Date()) + event.message.author.asTag + " executed the about command in: " + event.message.guild.name)
             val embedBuilder = EmbedBuilder()
             embedBuilder.setTitle("About Page")
             embedBuilder.setColor(
