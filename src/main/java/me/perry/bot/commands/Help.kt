@@ -41,6 +41,11 @@ class Help : ListenerAdapter() {
                 "Tells you info about a player playing on 2b au.",
                 false
             )
+            embedBuilder.addField(
+                ":game_die: - Dice",
+                "Rolls a dice.",
+                false
+            )
             event.channel.sendMessageEmbeds(embedBuilder.build()).queue()
         }
     }

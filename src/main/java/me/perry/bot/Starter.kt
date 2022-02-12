@@ -1,9 +1,6 @@
 package me.perry.bot
 
-import me.perry.bot.commands.About
-import me.perry.bot.commands.Help
-import me.perry.bot.commands.Info
-import me.perry.bot.commands.Player
+import me.perry.bot.commands.*
 import net.dv8tion.jda.api.JDABuilder
 import net.dv8tion.jda.api.entities.Activity
 import net.dv8tion.jda.api.requests.GatewayIntent
@@ -20,7 +17,8 @@ fun main() {
             About(),
             Help(),
             Info(),
-            Player()
+            Player(),
+            Dice()
         )
         .disableCache(
             CacheFlag.ACTIVITY,
