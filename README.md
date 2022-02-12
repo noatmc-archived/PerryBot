@@ -1,2 +1,2 @@
 # PerryBot
-Discord made with JDA entirely in Kotlin.
+Discord bot made with JDA entirely in Kotlin.
